@@ -11,7 +11,7 @@ resources:
   - name: box-p-scaler
     type: replicas
     source:
-      count: 1
+      count: 2
 
 # PROD env vars resource for BOX
   - name: box-p-params
