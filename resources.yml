@@ -9,7 +9,7 @@ resources:
   - name: box-p-scaler
     type: replicas
     source:
-      count: 2
+      count: 1
 
   - name: box-p-params
     type: params
