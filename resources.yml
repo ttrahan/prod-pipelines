@@ -25,7 +25,7 @@ resources:
     type: kickStart
     source:
       params:
-        counter: 1
+        counter: 2
 
 # Disaster recovery Docker Cloud cluster resource
   - name: env-dr-aws
