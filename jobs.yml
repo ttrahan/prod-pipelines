@@ -1,11 +1,11 @@
 jobs:
-  - name: box-prod-rc
+# PROD deployment job for BOX
+  - name: box-prod-aws
     type: ecsDeploy
     steps:
-      - GET: box-t-beta
+      - GET: box-test-aws
         trigger: false
       - GET: box-p-params
       - GET: box-p-scaler
       - GET: env-prod-aws
       - GET: box-p-kick
-
