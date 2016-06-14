@@ -1,0 +1,24 @@
+resources:
+  - name: env-prod-aws
+    type: ecsCluster
+    integration: avi-ecs
+    source:
+      name : "prod-aws" #name of the cluster we are deploying
+      region: "us-east-1"
+
+  - name: box-p-scaler
+    type: replicas
+    source:
+      count: 1
+
+  - name: box-p-params
+    type: params
+    source:
+      params:
+        ENVIRONMENT: "prod-aws"
+
+  - name: box-p-kick
+    type: kickStart
+    source:
+      params:
+        count: "1"
